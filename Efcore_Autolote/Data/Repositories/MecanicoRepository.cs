@@ -153,7 +153,7 @@ namespace Data.Repositories
             return new TMecanico
             {
                 IdMecanico = mechanic.IdMecanico,
-                IdBase = mechanic.IdMecanico,
+                IdBase = mechanic.IdBase,
                 Nombre = mechanic.Nombre,
                 Apellido = mechanic.Apellido,
                 NumeroTelefono = mechanic.NumeroTelefono,

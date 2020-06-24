@@ -16,7 +16,7 @@ namespace Data.Repositories
 
         bool Exist(int id);
 
-        bool Exist(string name);
+        bool Exist(string brand);
 
         Auto SearchToId(int id);
 

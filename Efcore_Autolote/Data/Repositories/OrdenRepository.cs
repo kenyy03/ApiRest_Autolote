@@ -102,7 +102,7 @@ namespace Data.Repositories
             }
         }
 
-        public bool Exist(DateTime fecha)
+        public bool Exist(DateTime? fecha)
         {
             try
             {

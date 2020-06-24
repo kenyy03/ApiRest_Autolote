@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Data.Repositories
 {
-    public class ReparacionRepository
+    public class ReparacionRepository:IReparacionRepository
     {
         public readonly DB_Context db;
 
@@ -57,7 +57,7 @@ namespace Data.Repositories
             }
         }
 
-        public bool Exist(DateTime date)
+        public bool Exist(DateTime? date)
         {
             try
             {

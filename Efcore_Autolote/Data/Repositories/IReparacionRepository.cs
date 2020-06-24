@@ -20,6 +20,6 @@ namespace Data.Repositories
 
         bool Exist(int id);
 
-        bool Exist(DateTime date);
+        bool Exist(DateTime? date);
     }
 }
