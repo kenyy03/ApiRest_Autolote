@@ -152,5 +152,38 @@ namespace WebApi.Controllers
                 throw;
             }
         }
+
+        [HttpPut]
+        [ActionName("Update")]
+
+        public IActionResult Update([FromBody] Cliente cliente)
+        {
+            try
+            {
+                if (ValidateToken())
+                {
+                    var exist = _clienteRepository.Exist(cliente.IdCliente);
+
+                    if (exist)
+                    {
+                        var data = _clienteRepository.Update(cliente);
+                        return Ok(data);
+                    }
+                    else
+                    {
+                        return BadRequest("No se actualizo el registro");
+                    }
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status401Unauthorized, "Token no valido");
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+                throw;
+            }
+        }
     }
 }
